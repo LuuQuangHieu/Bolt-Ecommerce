@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_grey">#707070</color>
+    <color name="text_dark_grey">#323232</color>
+    <color name="tv_title">#434343</color>
+    <color name="tv_nomal">#656565</color>
+    <color name="tv_clothes">#2a2a2a</color>
+    <color name="blue_light">#667eea</color>
+    <color name="grey_back">#F3F3F3</color>
+    <color name="tv_brand_grey">#919191</color>
+    <color name="tv_price_blue">#374ABE</color>
+    <color name="quantity_bar_grey">#f6f6f6</color>
+    <color name="tv_total_grey">#585B5E</color>
+    <color name="tv_menu_title">#696969</color>
+</resources>

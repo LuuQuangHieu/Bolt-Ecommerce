@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="category"
+            type="com.glory.mvvmexample.data.model.Category" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rl_bolt_item"
+        android:layout_width="114dp"
+        android:layout_height="65dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="false"
+        android:layout_marginStart="15dp"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:src="@drawable/icon_bolt"
+                android:scaleType="centerCrop"
+                loadImage="@{category.imgCate}"/>
+            <ImageView
+                android:id="@+id/iv_alpha_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:alpha="0.75"
+                loadImageInt="@{category.imgAlphaColor}"
+                />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/segoe_bold"
+                android:gravity="center"
+                tools:text="Category"
+                android:text="@{category.title}"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.glory.mvvmexample.ui.screen.ScreenViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_welcome_bolt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="112dp"
+            android:gravity="center"
+            android:text="@string/tv_welcome_bolt"
+            android:textColor="#707070"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_explore_us"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/tv_explore_us"
+            android:textColor="#707070"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_welcome_bolt"
+            app:layout_constraintStart_toStartOf="@+id/tv_welcome_bolt"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome_bolt" />
+
+        <ImageView
+            android:id="@+id/iv_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_explore_us"
+            app:layout_constraintStart_toStartOf="@+id/tv_explore_us"
+            app:layout_constraintTop_toBottomOf="@+id/tv_explore_us"
+            app:srcCompat="@drawable/sign_up_login" />
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="245dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="111dp"
+            android:background="@drawable/gradient_background"
+            android:onClick="@{() -> viewModel.doLogin()}"
+            android:text="@string/bt_login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_screen"
+            app:layout_constraintStart_toStartOf="@+id/iv_screen"
+            app:layout_constraintTop_toBottomOf="@+id/iv_screen" />
+
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center"
+            android:text="@string/tv_signup"
+            android:textColor="@color/text_grey"
+            android:textSize="15sp"
+            android:onClick="true"
+            app:layout_constraintEnd_toEndOf="@+id/bt_login"
+            app:layout_constraintStart_toStartOf="@+id/bt_login"
+            app:layout_constraintTop_toBottomOf="@+id/bt_login"
+            tools:ignore="OnClick" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

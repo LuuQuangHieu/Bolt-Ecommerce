@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="itemCart"
+            type="com.glory.mvvmexample.data.model.Cart" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="19dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_clothes_item"
+                android:layout_width="100dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:scaleType="fitXY"
+                tools:src="@drawable/woman"
+                loadImageInt="@{itemCart.imageClothes}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_clothes_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/segoeui"
+                android:text="@{itemCart.title}"
+                tools:text="title"
+                android:textColor="@color/tv_title"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_clothes_item"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_clothes_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/segoeui"
+                tools:text="album"
+                android:text="@{itemCart.album}"
+                android:textColor="@color/tv_brand_grey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_clothes_item"
+                app:layout_constraintTop_toBottomOf="@+id/tv_clothes_title" />
+
+            <TextView
+                android:id="@+id/tv_clothes_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/segoeui"
+                tools:text="price"
+                android:text="@{itemCart.price}"
+                android:textColor="@color/tv_price_blue"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_clothes_item"
+                app:layout_constraintTop_toBottomOf="@+id/tv_clothes_album" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_quantity_bar"
+                android:layout_width="114dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintStart_toEndOf="@+id/iv_clothes_item"
+                app:layout_constraintTop_toBottomOf="@+id/tv_clothes_price">
+
+                <LinearLayout
+                    android:id="@+id/ll_quantity_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bt_sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/quantity_bar_grey"
+                        android:fontFamily="@font/segoe_bold"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tv_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/quantity_bar_grey"
+                        android:fontFamily="@font/segoe_semibold"
+                        android:gravity="center"
+                        loadTextInt="@{itemCart.quantity}"
+                        android:textColor="#565656"
+                        tools:text="1" />
+
+                    <Button
+                        android:id="@+id/bt_plus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/quantity_bar_grey"
+                        android:fontFamily="@font/segoe_bold"
+                        android:text="+" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_my_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/segoe_semibold"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:visibility="invisible"
+                    android:text="@string/bt_order_again"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/gradient_background"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/bt_remove_item"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ic_remove"
+                android:elevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

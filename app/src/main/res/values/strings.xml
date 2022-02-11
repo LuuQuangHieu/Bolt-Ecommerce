@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">MVVMExample</string>
+    <string name="tv_login">Login</string>
+    <string name="bt_login">Log In</string>
+    <string name="tv_dont_have_account">Don\'t have an account? Signup</string>
+    <string name="tv_welcome_bolt">Welcome to Bolt</string>
+    <string name="tv_explore_us">Explore Us</string>
+    <string name="tv_signup">Signup</string>
+    <string name="bt_signup">Sign Up</string>
+    <string name="tv_already_account">Already have an account? Sign in</string>
+    <string name="descript_example">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine</string>
+
+    <string name="strike_text"><strike>$62</strike></string>
+    <string name="bt_continue">Continue</string>
+    <string name="bt_continue_to_payment">Continue To Payment</string>
+    <string name="bt_add_address">Add Address</string>
+    <string name="bt_checkout">Checkout</string>
+    <string name="tv_subtotal">Subtotal</string>
+    <string name="tv_discount">Discount</string>
+    <string name="tv_shipping">Shipping</string>
+    <string name="tv_total">Total</string>
+    <string name="tv_address">Address</string>
+    <string name="tv_featured">Featured</string>
+    <string name="tv_home">Home</string>
+    <string name="tv_payment">Payment</string>
+    <string name="tv_profile">Profile</string>
+    <string name="tv_cart">Cart</string>
+    <string name="tv_favorite">Favorite</string>
+    <string name="tv_my_orders">My Orders</string>
+    <string name="tv_language">Language</string>
+    <string name="tv_settings">Settings</string>
+    <string name="bt_save_profile">Save Profile</string>
+    <string name="tv_checkout">Checkout</string>
+    <string name="bt_order_again">Order Again</string>
+    <string name="bt_buy">Buy</string>
+    <string name="bt_back_to_home">Back to Home</string>
+    <string name="tv_success">You have successfully\ncompleted your payment procedure</string>
+    <string name="please_wait">Connecting...</string>
+
+</resources>
